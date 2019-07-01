@@ -1,2 +1,2 @@
 # git-study
-git-study
+git-study with ssh 
