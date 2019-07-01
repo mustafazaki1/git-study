@@ -1,0 +1,96 @@
+<div class="main_content defrant-width p-0">
+  <form [formGroup]="notebookForm" (ngSubmit)="onSubmit()">
+    <div class="search_results_container">
+      <!-- اعدادات الدفتر -->
+      <div class="row form_row">
+        <div class="card col">
+          <div class="card-body">
+            <h5 class="card-title">اعدادات الدفتر</h5>
+            <h5 class="card-title cardAction addtoArchive">
+              <button type="button" class="btn addBtnIcon">
+                <i class="fas fa-archive"></i> اضف الى الأرشيف
+              </button>
+            </h5>
+            <div class="row">
+              <div class="col-lg-6 col-xs-12">
+                <div class="form-group">
+                  <label>اسم الدفتر</label>
+                  <input type="text" formControlName="notebookName" class="form-control" />
+                </div>
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col float-right pt-2 pb-2">
+                <label class="float-right beforeLabel">نوع الدفتر: </label>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="customRadioInline1" [value]="1" [(ngModel)]="customRadioInline1" [ngModelOptions]="{standalone: true}"
+                    name="customRadioInline1" class="custom-control-input" checked>
+                  <label class="custom-control-label" for="customRadioInline1">جهات</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="customRadioInline2" [value]="2" [(ngModel)]="customRadioInline1" [ngModelOptions]="{standalone: true}"
+                    name="customRadioInline1" class="custom-control-input" checked>
+                  <label class="custom-control-label" for="customRadioInline2">اشخاص</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3 col-xs-12 float-right">
+                <div class="custom-control custom-checkbox pr-4">
+                  <input formControlName="notebookHaveComplainers" type="checkbox" class="custom-control-input" id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1">إضافة مقدمى البلاغ</label>
+                </div>
+              </div>
+				<div class="col-lg-3 col-xs-12 float-right">
+                <div class="custom-control custom-checkbox pr-4">
+                  <input formControlName="notebookHaveComplainersTo" type="checkbox" class="custom-control-input" id="customCheck2">
+                  <label class="custom-control-label" for="customCheck2">إضافة مشكو في حقهم</label>
+                </div>
+              </div>
+              <div class="col-lg-3 col-xs-12 float-right">
+                <div class="custom-control custom-checkbox pr-4">
+                  <input formControlName="notebookHaveIssues" type="checkbox" class="custom-control-input" id="customCheck3">
+                  <label class="custom-control-label" for="customCheck3">إضافة قضايا</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+            <!-- custom-Modal -->
+            <app-custom-modal #componentInsideModal>
+              <ng-template #modalHeader>
+                <h5 style="text-align: center; font-size: 1.0rem !important">
+                  <span class="w-100 d-inline-block successModal">
+                    <i class="fas fa-check"></i>
+                  </span>
+                  تم إنشاء الدفتر  بنجاح</h5>
+              </ng-template>
+              <ng-template #modalBody>
+              </ng-template>
+              <ng-template #modalFooter>
+                <div class="row w-100">
+                  <div class="col text-center p-0">
+                    <button class="button searchBtn" (click)="close()">تم</button>
+                  </div>
+                </div>
+              </ng-template>
+            </app-custom-modal>
+            <!--End Of Custom Modal -->
+      
+
+    <!-- اعدادات توزيع العمل -->
+    <app-work-distribution-settings></app-work-distribution-settings>
+    
+    <!-- Actions -->
+    <div class="row">
+      <div class="col text-center">
+        <button class="button searchBtn" type="submit">حفظ</button>
+        <button class="button resetBtn searchBtn" (click)="backtoList()">إلغاء</button>
+      </div>
+    </div>
+    </div>
+  </form>
+</div>

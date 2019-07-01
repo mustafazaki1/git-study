@@ -1,0 +1,226 @@
+<div class="row form_row">
+  <div class="card col">
+    <div class="card-body">
+      <h5 class="card-title">اعدادات توزيع العمل</h5>
+      <div class="table-responsive">
+        <table class="table table-striped table-container notebookDuties">
+          <thead>
+            <tr>
+              <th>العضو</th>
+              <th>
+                <div class="row">
+                  <div class="col">٠</div>
+                  <div class="col">١</div>
+                  <div class="col">٢</div>
+                  <div class="col">٣</div>
+                  <div class="col">٤</div>
+                  <div class="col">٥</div>
+                  <div class="col">٦</div>
+                  <div class="col">٧</div>
+                  <div class="col">٨</div>
+                  <div class="col">٩</div>
+                </div>
+              </th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>
+                    <div class="form-group">
+                      <select class="custom-select" id="exampleFormControlSelect1" [(ngModel)]="member.member"
+                        [ngModelOptions]="{standalone: true}">
+                        <option [value]="null">- اسم العضو -</option>
+                        <option  *ngFor="let usr of users" [ngValue]="usr">{{usr.name}}</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="row">
+                      <div class="col">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck40" [(ngModel)]="member.zero"
+                          [ngModelOptions]="{standalone: true}">
+                          <label class="custom-control-label" for="customCheck40">&nbsp;</label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck50" [(ngModel)]="member.one"
+                          [ngModelOptions]="{standalone: true}">
+                          <label class="custom-control-label" for="customCheck50"></label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck60" [(ngModel)]="member.two"
+                          [ngModelOptions]="{standalone: true}">
+                          <label class="custom-control-label" for="customCheck60"></label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck70" [(ngModel)]="member.three"
+                          [ngModelOptions]="{standalone: true}">
+                          <label class="custom-control-label" for="customCheck70"></label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck80" [(ngModel)]="member.four"
+                          [ngModelOptions]="{standalone: true}">
+                          <label class="custom-control-label" for="customCheck80"></label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck90" [(ngModel)]="member.five"
+                          [ngModelOptions]="{standalone: true}">
+                          <label class="custom-control-label" for="customCheck90"></label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck100"[(ngModel)]="member.six"
+                          [ngModelOptions]="{standalone: true}">
+                          <label class="custom-control-label" for="customCheck100"></label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck110" [(ngModel)]="member.seven"
+                          [ngModelOptions]="{standalone: true}">
+                          <label class="custom-control-label" for="customCheck110"></label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck120" [(ngModel)]="member.eight"
+                          [ngModelOptions]="{standalone: true}">
+                          <label class="custom-control-label" for="customCheck120"></label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck130" [(ngModel)]="member.nine"
+                          [ngModelOptions]="{standalone: true}">
+                          <label class="custom-control-label" for="customCheck130"></label>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  
+            </tr>
+            <!-- Create -->
+            <tr *ngFor=" let member of members;let i = index">
+              
+              <td>
+                <div class="form-group">
+                    <label>{{member.member.name}}</label>
+                </div>
+              </td>
+              <td>
+                <div class="row">
+                  <div class="col">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck40" [(ngModel)]="member.zero"
+                      [ngModelOptions]="{standalone: true}" disabled>
+                      <label class="custom-control-label" for="customCheck40">&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck50" [(ngModel)]="member.one"
+                      [ngModelOptions]="{standalone: true}" disabled>
+                      <label class="custom-control-label" for="customCheck50"></label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck60" [(ngModel)]="member.two"
+                      [ngModelOptions]="{standalone: true}" disabled>
+                      <label class="custom-control-label" for="customCheck60"></label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck70" [(ngModel)]="member.three"
+                      [ngModelOptions]="{standalone: true}" disabled>
+                      <label class="custom-control-label" for="customCheck70"></label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck80" [(ngModel)]="member.four"
+                      [ngModelOptions]="{standalone: true}" disabled>
+                      <label class="custom-control-label" for="customCheck80"></label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck90" [(ngModel)]="member.five"
+                      [ngModelOptions]="{standalone: true}" disabled>
+                      <label class="custom-control-label" for="customCheck90"></label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck100"[(ngModel)]="member.six"
+                      [ngModelOptions]="{standalone: true}" disabled>
+                      <label class="custom-control-label" for="customCheck100"></label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck110" [(ngModel)]="member.seven"
+                      [ngModelOptions]="{standalone: true}" disabled>
+                      <label class="custom-control-label" for="customCheck110"></label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck120" [(ngModel)]="member.eight"
+                      [ngModelOptions]="{standalone: true}" disabled>
+                      <label class="custom-control-label" for="customCheck120"></label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck130" [(ngModel)]="member.nine"
+                      [ngModelOptions]="{standalone: true}" disabled>
+                      <label class="custom-control-label" for="customCheck130"></label>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <button type="button" class="btn addBtnIcon addBtnIcon-sm deleteBtnIcon" data-balloon="حذف العضو"
+                  data-balloon-pos="up" style="margin-top: 6%;" (click)="removeMemeber(i);">
+                  <i class="far fa-trash-alt"></i>
+                </button>
+              </td>
+            
+            </tr>
+            <!-- View & Edit -->
+
+          </tbody>
+        </table>
+        <!--اضافة عضو-->
+        <div class="row mt-4">
+          <div class="col addMemberCol">
+            <button type="button" class="btn addBtnIcon" (click)="addNewmember()">
+              <i class="fas fa-plus"></i>إضافة عضو
+            </button>
+            <!-- <div *ngIf="submitted" class="alert-danger">
+              <div *ngIf="missingName">اسم العضو اجباري</div>
+              <div *ngIf="missingNumber">يجيب علي الاقل اضافة رقم  للعضو </div>
+              <div *ngIf="missingAllNumber">رجاء أدخل باقي أرقام التوزيع</div>
+              <div *ngIf="conflictNumber">تم اضافه هذا الرقم لعضو اخر مسباقا</div>
+            </div>            -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
